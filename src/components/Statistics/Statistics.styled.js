@@ -1,8 +1,8 @@
 import styled from '@emotion/styled';
-/*import { theme } from '../../constans/theme';*/
+/*import { theme } from '../../constants/theme';*/
 export const Item = styled.p`
-  color: ${props => props.theme.colors.black};
-  padding: ${props => props.theme.spacing(25)}px;
+  color: #956672;
+  padding: 25px;
   padding-left: 0;
-  font-size: ${props => props.theme.typography.title};
+  font-size: 25px;
 `;

@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import PropTypes from 'prop-types';
 import { Statistics } from './Statistics/Statistics';
 import { Section } from './Section/Section';
 import { FeedbackOptions } from './FeedbackOptions/FeedbackOptions';
@@ -19,21 +18,18 @@ export class App extends Component {
     return Math.round((this.state.good / this.countTotalFeedback()) * 100);
   };
 
-  handleClick = option => {
+  handleClick = evt => {
+    const nameOption = evt.currentTarget.name;
     this.setState(prevState => {
-      return {
-        [option]: prevState[option] + 1,
-      };
+      return { [nameOption]: prevState[nameOption] + 1 };
     });
   };
 
   render() {
     const { good, neutral, bad } = this.state;
     const options = Object.keys(this.state);
-
     return (
       <>
-        <h1 hidden>Comments</h1>
         <Section title="Please leave feedback">
           <FeedbackOptions
             options={options}

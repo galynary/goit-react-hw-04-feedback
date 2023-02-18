@@ -9,13 +9,13 @@ export const Statistics = ({
   positivePercentage,
 }) => {
   return (
-    <statisticsList>
+    <>
       <Item>Good: {good}</Item>
       <Item>Neutral: {neutral}</Item>
       <Item>Bad: {bad}</Item>
       <Item>Total: {total}</Item>
       <Item>Positive feedback: {positivePercentage}%</Item>
-    </statisticsList>
+    </>
   );
 };
 
